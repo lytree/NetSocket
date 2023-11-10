@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{9D9E8D05-F765-4C82-837C-A709BAA054A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{9D9E8D05-F765-4C82-837C-A709BAA054A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Middleware", "Middleware\Net.Middleware.csproj", "{E332B302-F030-4E06-BB73-6C33A5300B73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net.Middleware", "Middleware\Net.Middleware.csproj", "{E332B302-F030-4E06-BB73-6C33A5300B73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Framework", "Framework\Net.Framework.csproj", "{A1F1B443-722B-4977-95BA-D9FCAB2ED93C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net.Framework", "Framework\Net.Framework.csproj", "{A1F1B443-722B-4977-95BA-D9FCAB2ED93C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Fiddler", "Net.Fiddler\Net.Fiddler.csproj", "{6EE87CCD-3027-4D23-B2A8-792BAFCE796B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net.Fiddler", "Net.Fiddler\Net.Fiddler.csproj", "{6EE87CCD-3027-4D23-B2A8-792BAFCE796B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Services", "Application.Service\Application.Services.csproj", "{358977FA-45FA-4E66-8390-43D60D5C032F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6EE87CCD-3027-4D23-B2A8-792BAFCE796B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE87CCD-3027-4D23-B2A8-792BAFCE796B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE87CCD-3027-4D23-B2A8-792BAFCE796B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358977FA-45FA-4E66-8390-43D60D5C032F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358977FA-45FA-4E66-8390-43D60D5C032F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358977FA-45FA-4E66-8390-43D60D5C032F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358977FA-45FA-4E66-8390-43D60D5C032F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

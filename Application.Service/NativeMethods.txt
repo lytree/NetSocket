@@ -1,0 +1,11 @@
+﻿OpenSCManager
+CreateService
+OpenService
+StartService
+DeleteService
+ControlService
+QueryServiceStatus
+QueryServiceStatusEx
+QueryServiceConfig
+ChangeServiceConfig
+ChangeServiceConfig2W

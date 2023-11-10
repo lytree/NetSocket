@@ -55,6 +55,7 @@ namespace Application
 
 			app.UseAuthorization();
 			app.Run();
+			
 		}
 	}
 }

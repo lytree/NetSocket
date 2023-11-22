@@ -11,14 +11,20 @@ namespace Microsoft.Extensions.DependencyInjection
 	public static partial class ServiceCollectionExtensions
 	{
 		/// <summary>
-		/// 添加http代理
+		/// 添加Modbus Slave 端
 		/// </summary>
 		/// <param name="services"></param> 
 		/// <returns></returns>
-		public static IServiceCollection AddModbusTcpSlave(this IServiceCollection services)
+		public static IServiceCollection AddModbusTcpSlave(this IServiceCollection services, Func<IServiceProvider, ModbusSlaveNetwork> modbusSlaveNetwork)
 		{
+			services.TryAddSingleton(modbusSlaveNetwork);
 			services.TryAddSingleton<ModbusConnectionHandler>();
-			services.TryAddSingleton<ModbusSlaveNetwork>(new ModbusTcpSlaveNetwork(new ModbusFactory(), NullLogger<ModbusLogger>.Instance));
+			return services;
+		}
+		public static IServiceCollection AddModbusTcpSlave(this IServiceCollection services, Func<ModbusSlaveNetwork> modbusSlaveNetwork)
+		{
+			services.TryAddSingleton(modbusSlaveNetwork);
+			services.TryAddSingleton<ModbusConnectionHandler>();
 			return services;
 		}
 	}

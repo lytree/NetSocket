@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Logging.Abstractions;
 using Middleware.HttpProxy;
+using Net.Middleware.Modbus;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -13,13 +15,11 @@ namespace Microsoft.Extensions.DependencyInjection
 		/// </summary>
 		/// <param name="services"></param> 
 		/// <returns></returns>
-		public static IServiceCollection AddHttproxy(this IServiceCollection services)
+		public static IServiceCollection AddModbusTcpSlave(this IServiceCollection services)
 		{
-			services.TryAddSingleton<IHttpProxyAuthenticationHandler, HttpProxyAuthenticationHandler>();
-			return services
-				.AddSingleton<ProxyMiddleware>()
-				.AddSingleton<TunnelProxyMiddleware>()
-				.AddHttpForwarder();
+			services.TryAddSingleton<ModbusConnectionHandler>();
+			services.TryAddSingleton<ModbusSlaveNetwork>(new ModbusTcpSlaveNetwork(new ModbusFactory(), NullLogger<ModbusLogger>.Instance));
+			return services;
 		}
 	}
 }
